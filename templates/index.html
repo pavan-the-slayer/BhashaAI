@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101012">
+    <title>BhashaAI | Customer Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">B</div>
+            <div>
+                <strong>BHASHAAI</strong>
+                <small>Multilingual customer support</small>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <span class="status-dot"></span>
+            <span id="status-text">Assistant ready</span>
+            <button type="button" id="new-chat">New conversation</button>
+            <button type="button" id="clear-chat">Clear chat</button>
+        </div>
+    </header>
+
+    <main id="chat-area" class="chat-area">
+        <section id="welcome" class="welcome">
+            <div class="welcome-icon">B</div>
+            <h1>Hi there! 👋</h1>
+            <p>Talk naturally. I'm here to help.</p>  
+
+            <div class="suggestions">
+                
+                 <button class="suggestion" data-prompt="Show me all products in the store">
+                    🛍️ Explore products
+                 </button>
+                
+            </div>
+        </section>
+
+        <section id="messages" class="messages" aria-live="polite"></section>
+    </main>
+
+    <footer class="composer-area">
+        <form id="chat-form" class="chat-form">
+            <textarea
+                id="message-input"
+                name="message"
+                rows="1"
+                maxlength="4000"
+                placeholder="Message BhashaAI..."
+                aria-label="Your message"
+                required
+            ></textarea>
+            <button id="send-button" type="submit">Send ↑</button>
+        </form>
+        <p class="disclaimer">
+            BhashaAI can make mistakes. Store information shown here is demo data.
+        </p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>

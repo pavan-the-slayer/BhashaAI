@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BhashaMart | Discover Something Better</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='store.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="/store">BhashaMart<span>.</span></a>
+        <div class="nav-links">
+            <a href="#products">Products</a>
+            <a href="#story">Our story</a>
+        </div>
+        <a class="bag" href="#products" aria-label="Browse products">
+            <svg viewBox="0 0 24 24" width="23" height="23" fill="none"
+                 stroke="currentColor" stroke-width="1.6">
+                <path d="M5 8h14l1 13H4L5 8Z"/>
+                <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+            </svg>
+        </a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">INTRODUCING BHASHAMART</p>
+            <h1>Good tech.<br><span>Better everyday.</span></h1>
+            <p class="subtitle">
+                Thoughtfully selected products for the way you live.
+            </p>
+            <a class="primary-button" href="#products">
+                Explore products <span>↗</span>
+            </a>
+
+            <div class="hero-art">
+                <div class="glow"></div>
+                <div class="headphones">
+                    <div class="headband"></div>
+                    <div class="earcup left"></div>
+                    <div class="earcup right"></div>
+                </div>
+                <div class="art-caption">SONIC PRO · WIRELESS AUDIO</div>
+            </div>
+        </section>
+
+        <section class="products-section" id="products">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE COLLECTION</p>
+                    <h2>Find your favourite.</h2>
+                </div>
+                <span class="product-count">3 products</span>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card headphones-card">
+                    <div class="product-visual">
+                        <div class="mini-headphones">
+                            <div class="mini-band"></div>
+                            <div class="mini-cup left"></div>
+                            <div class="mini-cup right"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="category">AUDIO</p>
+                        <h3>Sonic Pro</h3>
+                        <p>Rich sound. Wireless freedom.</p>
+                        <div class="product-bottom">
+                            <strong>₹1,999</strong>
+                            <button class="shop-button"
+                                    data-product="Sonic Pro">View</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card watch-card">
+                    <div class="product-visual">
+                        <div class="watch">
+                            <div class="watch-strap"></div>
+                            <div class="watch-face">
+                                <span>10:09</span>
+                                <small>MON 12</small>
+                                    <i></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="category">WEARABLES</p>
+                        <h3>Pulse Watch</h3>
+                        <p>Move smarter every day.</p>
+                        <div class="product-bottom">
+                            <strong>₹2,499</strong>
+                            <button class="shop-button"
+                                    data-product="Pulse Watch">View</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card shoes-card">
+                    <div class="product-visual">
+                        <div class="shoe">
+                            <div class="shoe-upper"></div>
+                            <div class="shoe-sole"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p class="category">EVERYDAY ESSENTIALS</p>
+                        <h3>AirFlex Sneakers</h3>
+                        <p>Light on your feet.</p>
+                        <div class="product-bottom">
+                            <strong>₹1,499</strong>
+                            <button class="shop-button"
+                                    data-product="AirFlex Sneakers">View</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="story" id="story">
+            <p class="eyebrow">A BETTER WAY TO SHOP</p>
+            <h2>Less clutter.<br>More of what matters.</h2>
+            <p>
+                A carefully curated demo store, with BhashaAI ready
+                to help you discover products and answer questions.
+            </p>
+            <a href="/" class="assistant-link">
+                Meet your AI assistant <span>↗</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <a class="logo" href="/store">BhashaMart<span>.</span></a>
+        <p>Demo store · Sample products and prices</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll(".shop-button").forEach(button => {
+            button.addEventListener("click", () => {
+                const product = button.dataset.product;
+                window.location.href =
+                    "/?product=" + encodeURIComponent(product);
+            });
+        });
+    </script>
+</body>
+</html>

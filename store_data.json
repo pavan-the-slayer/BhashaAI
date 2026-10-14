@@ -1,0 +1,51 @@
+{
+  "store": {
+    "name": "BhashaMart",
+    "currency": "INR",
+    "shipping_policy": "Demo policy: estimated delivery is 3-7 business days. This is sample information, not a real shipping guarantee.",
+    "return_policy": "Demo policy: return requests can be discussed within 7 days of delivery. Actual return eligibility must be verified before promising a return.",
+    "refund_policy": "Demo policy: refunds are not actually processed by this prototype. A real payment/order integration is required.",
+    "support_policy": "The assistant can explain products and guide customers. It cannot access real shipment systems or create paid orders."
+  },
+  "products": [
+    {
+      "id": "BM001",
+      "name": "Sonic Pro",
+      "category": "Audio",
+      "price": 1999,
+      "stock": 15,
+      "description": "Wireless headphones with rich sound and comfortable ear cushions.",
+      "features": [
+        "Wireless audio",
+        "Comfortable ear cushions",
+        "Everyday listening"
+      ]
+    },
+    {
+      "id": "BM002",
+      "name": "Pulse Watch",
+      "category": "Wearables",
+      "price": 2499,
+      "stock": 8,
+      "description": "A demo smartwatch for everyday activity tracking and notifications.",
+      "features": [
+        "Activity tracking",
+        "Phone notifications",
+        "Everyday design"
+      ]
+    },
+    {
+      "id": "BM003",
+      "name": "AirFlex Sneakers",
+      "category": "Footwear",
+      "price": 1499,
+      "stock": 12,
+      "description": "Lightweight everyday sneakers designed for casual comfort.",
+      "features": [
+        "Lightweight design",
+        "Casual styling",
+        "Everyday comfort"
+      ]
+    }
+  ]
+}
